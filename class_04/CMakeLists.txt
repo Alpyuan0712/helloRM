@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(class_04 LANGUAGES CXX)
+find_package(OpenCV REQUIRED)
+add_executable(class_04 main.cpp)
+target_include_directories(class_04 PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(class_04 PRIVATE ${OpenCV_LIBS})
+target_compile_features(class_04 PRIVATE cxx_std_17)
